@@ -1,11 +1,28 @@
-export const NAV_LINKS = [
+
+
+type NavLinks = {
+  id:number;
+  url:string;
+  text:string
+}
+
+type Sports = {
+  id:number;
+  title:string;
+  description:string;
+  image:string
+  url:string
+}
+
+
+export const NAV_LINKS:NavLinks[] = [
   { id: 1, url: "/about", text: "About" },
   { id: 2, url: "/events", text: "Events" },
   { id: 3, url: "/membership", text: "Membership" },
   { id: 4, url: "/contact", text: "Contact" },
 ];
 
-export const sportsList = [
+export const sportsList:Sports[] = [
   {
     id: 1,
     title: "Weightlifting",
