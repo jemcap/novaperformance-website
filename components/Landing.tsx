@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Button from "./Button";
@@ -10,12 +11,12 @@ const Landing = () => {
       ".content > *",
       { opacity: 0, y: 50 },
       {
-        delay: 0.15,
+        delay: 0.1,
         opacity: 1,
         y: 0,
         duration: 1,
         ease: "power1.out",
-        stagger: 1.1,
+        stagger: 0.65,
       }
     );
   }, []);
@@ -39,7 +40,7 @@ const Landing = () => {
               Are you ready to{" "}
               <span className="text-red-700 font-bold">get strong?</span>
             </h1>
-            <p className="mt-4 text-sm sm:text-lg lg:text-2xl xl:text-[2rem] font-thin text-gray-100 max-w-[800px]">
+            <p className="mt-4 text-sm sm:text-lg lg:text-2xl xl:text-[2rem] text-gray-100 max-w-[800px] oswald">
               Train with us to unlock your strength potential! Whether you're
               new or experienced, our expert coaches and supportive community
               will help you push limits, build confidence, and achieve your

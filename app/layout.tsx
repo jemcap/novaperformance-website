@@ -5,8 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const bebasNeue = Bebas_Neue({
-  weight: "400", // specify weights you want to use (400 is normal weight for Bebas Neue)
-  subsets: ["latin"], // specify character sets you need
+  weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={bebasNeue.className}>
+      <body className={`${bebasNeue.className} antialiased`}>
         <Header />
         {children}
         <Footer />

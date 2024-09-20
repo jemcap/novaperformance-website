@@ -13,6 +13,9 @@ const config: Config = {
         foreground: "var(--foreground)",
         'nova-charcoal': '#202020',
       },
+      fontFamily: {
+        oswald: ["Oswald", "sans-serif"],
+      },
     },
   },
   daisyui: {

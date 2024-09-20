@@ -1,3 +1,4 @@
+import WhyNova from "@/components/WhyNova";
 import Landing from "@/components/Landing";
 import SportsSection from "@/components/SportsSection";
 
@@ -7,6 +8,7 @@ export default function Home() {
       <h1>
         <Landing />
         <SportsSection />
+        <WhyNova />
       </h1>
     </>
   );
