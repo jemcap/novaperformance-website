@@ -11,9 +11,13 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'nova-charcoal': '#202020',
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: ["light"],
+  },
+  plugins: [require("daisyui"), require("tailwindcss-animate")],
 };
 export default config;

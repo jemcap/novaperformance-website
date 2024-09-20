@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const bebasNeue = Bebas_Neue({
+  weight: "400", // specify weights you want to use (400 is normal weight for Bebas Neue)
+  subsets: ["latin"], // specify character sets you need
 });
 
 export const metadata: Metadata = {
@@ -25,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={bebasNeue.className}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
