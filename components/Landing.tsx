@@ -37,8 +37,8 @@ const Landing = () => {
             <source src="/nova-video.mp4" type="video/mp4"></source>
           </video>
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="content absolute inset-0 flex flex-col max-xl:items-center items-start justify-center text-start align-elements">
-            <h1 className="content-heading text-5xl font-bold text-white md:text-7xl lg:text-9xl">
+          <div className="content absolute inset-0 flex flex-col items-center lg:items-start top-[50%] lg:top-[55%] text-start align-elements">
+            <h1 className="content-heading text-5xl font-bold text-white md:text-6xl lg:text-9xl">
               Are you ready to{" "}
               <span className="text-red-700 font-bold">get strong?</span>
             </h1>
