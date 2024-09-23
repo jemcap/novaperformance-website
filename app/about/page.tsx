@@ -21,13 +21,13 @@ const AboutPage = () => {
         >
           Nova's Story
         </motion.h1>
-        <motion.p className="font-bold text-red-200 text-xl md:text-3xl relative z-10 text-center top-[30%]">
+        <motion.p className="font-bold text-red-500 text-xl md:text-3xl relative z-10 text-center top-[30%]">
           We're more than just a gym.
         </motion.p>
         <motion.div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url(/nova_group.jpg)`,
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(/nova_group.jpg)`,
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: backgroundY,
