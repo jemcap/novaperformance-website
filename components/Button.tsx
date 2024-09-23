@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ label, url }: { label: String; url: string }) => {
+const Button = ({ label, url }: { label: string; url: string }) => {
   return (
     <a
       href={url}

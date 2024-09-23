@@ -23,7 +23,7 @@ const Sport = () => {
             initial={{ opacity: 0, x: isEven ? 200 : -200 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-10"
+            className="mb-10 shadow-2xl"
           >
             <Link
               href={url}
@@ -32,7 +32,7 @@ const Sport = () => {
                 isEven ? "lg:flex-row-reverse" : ""
               }`}
             >
-              <div className="flex-1 px-4">
+              <div className="flex-1 px-4 mx-10">
                 <h1 className="text-3xl lg:text-8xl font-bold mb-2 text-red-500">
                   {title}
                 </h1>

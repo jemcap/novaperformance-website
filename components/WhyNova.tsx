@@ -1,8 +1,20 @@
+"use client";
+
 import Carousel from "./Carousel";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const WhyNova = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
   return (
-    <section className="flex flex-col items-center text-center gap-12 lg:flex-row lg:justify-between align-elements my-20">
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, x: 200 }}
+      animate={inView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="flex flex-col items-center text-center lg:flex-row lg:justify-between align-elements my-20"
+    >
       <div className="">
         <h1 className="text-4xl lg:text-8xl">
           Why <span className="text-red-500">Nova Performance?</span>
@@ -17,7 +29,7 @@ const WhyNova = () => {
         </p>
       </div>
       <Carousel />
-    </section>
+    </motion.section>
   );
 };
 
