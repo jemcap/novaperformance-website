@@ -1,7 +1,7 @@
 import React from "react";
 
 const MembershipPage = () => {
-  return <div>MembershipPage</div>;
+  return <div className="h-screen">MembershipPage</div>;
 };
 
 export default MembershipPage;

@@ -11,23 +11,23 @@ const AboutPage = () => {
     offset: ["start start", "end start"],
   });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "350%"]);
   return (
     <>
-      <div className="align-elements h-screen relative w-screen overflow-hidden">
+      <div className=" h-screen relative w-screen overflow-hidden">
         <motion.h1
           style={{ y: textY }}
-          className="font-bold text-white text-7xl md:text-9xl relative z-10 text-center top-[30%]"
+          className="font-bold text-white text-9xl md:text-9xl relative z-10 text-center top-[20%]"
         >
-          Nova's Story
+          Nova Performance
         </motion.h1>
-        <motion.p className="font-bold text-red-500 text-xl md:text-3xl relative z-10 text-center top-[30%]">
+        <motion.p className="font-bold text-red-500 text-4xl md:text-4xl relative z-10 text-center top-[20%]">
           We're more than just a gym.
         </motion.p>
         <motion.div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(/nova_group.jpg)`,
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url(/nova_group.jpg)`,
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: backgroundY,
@@ -42,12 +42,15 @@ const AboutPage = () => {
           }}
         />
       </div>
-      <p className="max-w-5xl align-elements">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est et dolorem
-        sint voluptates laborum sed beatae enim atque rem. Inventore, ex!
-        Incidunt earum molestias, repellendus hic vel culpa aut omnis sint a in
-        cupiditate velit aliquid voluptates suscipit voluptatem error, aliquam
-        accusantium animi libero atque illo ipsum eaque dolor officia.
+      <p className="max-w-5xl text-4xl align-elements my-10">
+        Nova Performance is a Weightlifting and Powerlifting facility. Nova
+        prides itself in the community atmosphere encouraged among all members
+        which allows each member to perform to their best. Nova Performance
+        offers: Small group training, personal training, tailored lifting
+        programs and competition coaching. ​ Nova Performance engages with high
+        quality coaches who understand the best training methods that fit your
+        desired outcomes. ​ With hard work and dedication, you can be the best
+        version of yourself.
       </p>
     </>
   );
