@@ -4,6 +4,7 @@ import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Button from "./Button";
+import Banner from "./Banner";
 
 const Landing = () => {
   useGSAP(() => {
@@ -23,8 +24,9 @@ const Landing = () => {
 
   return (
     <main>
-      <div className="hero relative w-screen overflow-hidden">
+      <div className="hero relative w-full overflow-hidden">
         <div>
+          <Banner />
           <video
             autoPlay
             muted

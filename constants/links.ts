@@ -48,3 +48,6 @@ export const sportsList:Sports[] = [
     url: "/strongman",
   },
 ];
+
+
+
