@@ -42,14 +42,18 @@ const Landing = () => {
               Are you ready to{" "}
               <span className="text-red-700 font-bold">get strong?</span>
             </h1>
-            <p className="mt-4 text-sm sm:text-lg lg:text-2xl xl:text-[2rem] text-gray-100 max-w-[800px] oswald">
+            <p className="mt-4 text-sm sm:text-lg lg:text-2xl xl:text-[2rem] text-gray-100 max-w-[800px]">
               Train with us to unlock your strength potential! Whether you're
               new or experienced, our expert coaches and supportive community
               will help you push limits, build confidence, and achieve your
               goals. Start your journey today!
             </p>
             <div className="mt-7">
-              <Button label="Inquire today" url="/" />
+              <Button
+                label="Inquire today"
+                url="/"
+                fontSize="text-xl lg:text-2xl"
+              />
             </div>
           </div>
         </div>
