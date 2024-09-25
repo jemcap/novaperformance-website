@@ -17,11 +17,11 @@ const AboutPage = () => {
       <div className=" h-screen relative w-screen overflow-hidden">
         <motion.h1
           style={{ y: textY }}
-          className="font-bold text-white text-9xl md:text-9xl relative z-10 text-center top-[20%]"
+          className="font-bold text-white text-5xl md:text-9xl relative z-10 text-center top-[20%]"
         >
           Nova Performance
         </motion.h1>
-        <motion.p className="font-bold text-red-500 text-4xl md:text-4xl relative z-10 text-center top-[20%]">
+        <motion.p className="font-bold text-red-500 text-2xl md:text-4xl relative z-10 text-center top-[20%]">
           We're more than just a gym.
         </motion.p>
         <motion.div
