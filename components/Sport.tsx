@@ -1,16 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { sportsList } from "@/constants/links";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 const Sport = () => {
   return (
-    <div className=" mx-auto px-4 ">
+    <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
         const { title, description, image, url } = item;
         const isEven = index % 2 === 1;
@@ -19,6 +18,7 @@ const Sport = () => {
 
         return (
           <motion.div
+            key={title}
             ref={ref}
             initial={{ opacity: 0, x: isEven ? 200 : -200 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -27,20 +27,23 @@ const Sport = () => {
           >
             <Link
               href={url}
-              key={title}
-              className={`flex bg-neutral-950 p-7 rounded-lg items-center ${
+              className={`flex flex-col lg:flex-row bg-neutral-950 p-5 md:p-7 rounded-lg items-center ${
                 isEven ? "lg:flex-row-reverse" : ""
               }`}
             >
-              <div className="flex-1 px-4 mx-10">
-                <h1 className="text-3xl lg:text-8xl font-bold mb-2 text-red-500">
+              {/* Text Section */}
+              <div className="text-center lg:text-start flex-1 mb-4 lg:mb-0 mx-4 lg:mx-10">
+                <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-8xl font-bold mb-2 text-red-500">
                   {title}
                 </h1>
-                <p className="text-gray-600 mb-4">{description}</p>
+                <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4">
+                  {description}
+                </p>
                 <Button label="Learn more" url={url} />
               </div>
 
-              <div className="relative w-80 h-96 flex-1">
+              {/* Image Section */}
+              <div className="relative w-full h-64 lg:w-80 lg:h-96 flex-1">
                 <Image
                   className="object-cover rounded-lg"
                   src={image}
