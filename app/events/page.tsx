@@ -35,6 +35,7 @@ const EventsPage = () => {
 
                       <div className="card-actions justify-start">
                         <Button
+                          type="button"
                           label="See more"
                           url={`/events/${url}?name=${encodeURIComponent(
                             title

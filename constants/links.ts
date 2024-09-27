@@ -65,16 +65,7 @@ export const eventsList:Events[] = [
     image: "/nova_powerlifting_competition_advert_2024.png",
     url: "/powerlifting",
   },
-  {
-    id: 2,
-    title: "Nova Powerlifting Open",
-    location: "St Ives, Cambridgeshire",
-    calendar: new Date("2024-10-27"),
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur odio vitae temporibus voluptas labore beatae mollitia quo quae optio.",
-    image: "/craig_squat.jpg",
-    url: "/strongman",
-  }
+
 ]
 
 

@@ -39,7 +39,6 @@ const Sport = () => {
                 <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4">
                   {description}
                 </p>
-                <Button label="Learn more" url={url} />
               </div>
 
               {/* Image Section */}
