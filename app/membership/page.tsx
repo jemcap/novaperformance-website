@@ -26,6 +26,9 @@ const MembershipPage = () => {
             </span>{" "}
             in your physical and mental growth with us?
           </p>
+          <p className="text-3xl">
+            Book a free consultation with us to see if our gym is right for you!
+          </p>
 
           <Card />
         </div>

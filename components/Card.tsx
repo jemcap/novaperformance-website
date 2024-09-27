@@ -23,7 +23,7 @@ const Card = () => {
               <div className="card-actions">
                 <Button
                   type="button"
-                  label="Inquire"
+                  label="Book a consultation"
                   fontSize="text-xl lg:text-2xl"
                 />
               </div>
