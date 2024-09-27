@@ -14,6 +14,13 @@ type Sports = {
   url:string
 }
 
+type Membership = {
+  id: number;
+  title: string;
+  description: string[];
+  price: string | number;
+}
+
 interface Events extends Sports {
   location: string;
   calendar: Date;
@@ -66,6 +73,21 @@ export const eventsList:Events[] = [
     url: "/powerlifting",
   },
 
+]
+
+export const membership:Membership[] = [
+  {
+    id: 1,
+    title: "Nova Performance Athlete",
+    description: [
+      "Personalised training plans",
+      "Access to expert coaching",
+      "Nutritional guidance",
+      "Performance assessments",
+      "24/7 access to training facilities"
+    ],
+    price: 99
+  }
 ]
 
 

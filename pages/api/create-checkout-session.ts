@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         line_items: [
           {
             price_data: {
-              currency: 'usd',
+              currency: 'gbp',
               product_data: {
                 name: name,
 
