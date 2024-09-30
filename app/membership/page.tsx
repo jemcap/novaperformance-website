@@ -2,7 +2,7 @@ import Card from "@/components/Card";
 
 const MembershipPage = () => {
   return (
-    <div className="bg-gradient-to-r from-red-950 via-neutral-950 to-red-950">
+    <div className="h-screen bg-gradient-to-r from-red-950 via-neutral-950 to-red-950">
       <div className="align-elements h-screen w-screen flex items-center justify-center overflow-hidden ">
         <div className="flex flex-col items-center gap-8">
           <h1 className="text-5xl text-center lg:text-left lg:text-8xl">

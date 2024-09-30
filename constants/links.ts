@@ -21,6 +21,14 @@ type Membership = {
   price: string | number;
 }
 
+type Members = {
+  id:number
+  name:string;
+  role:string;
+  url?:string;
+  img?:string;
+}
+
 interface Events extends Sports {
   location: string;
   calendar: Date;
@@ -72,6 +80,16 @@ export const eventsList:Events[] = [
     image: "/nova_powerlifting_competition_advert_2024.png",
     url: "/powerlifting",
   },
+  {
+    id: 2,
+    title: "Nova Weightlifting Winter Open",
+    location: "St Ives, Cambridgeshire",
+    calendar: new Date("2024-12-10"),
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur odio vitae temporibus voluptas labore beatae mollitia quo quae optio.",
+    image: "/nova_powerlifting_competition_advert_2024.png",
+    url: "/weightlifting",
+  },
 
 ]
 
@@ -87,6 +105,51 @@ export const membership:Membership[] = [
       "24/7 access to training facilities"
     ],
     price: 99
+  }
+]
+
+export const teamList:Members[] = [
+  {
+    id: 1,
+    name: "Adam Smith",
+    role: "Gym Owner / Head Coach",
+    img: "/adam_1.png"
+  },
+  {
+    id: 2,
+    name: "Craig Taylor",
+    role: "Head Powerlifting Coach",
+    img: "/craig_2.png"
+  },
+  {
+    id: 3,
+    name: "Matt Nice",
+    role: "Head Strongman Coach",
+    img: "/matt_1.png"
+  },
+  {
+    id: 4,
+    name: "Lily Yu",
+    role: "Weightlifting Coach",
+    img: "/lily_yu_1.png"
+  },
+  {
+    id: 5,
+    name: "Tiago Costa",
+    role: "Weightlifting Coach",
+    img: "/tiago_1.png"
+  },
+  {
+    id: 6,
+    name: "Sam Evans",
+    role: "Weightlifting Coach",
+    img: "/sam_1.png"
+  },
+  {
+    id: 7,
+    name: "Isaac Leatherland",
+    role: "Physiotherapist / Powerlifting Coach",
+    img: "/isaac_1.png"
   }
 ]
 
