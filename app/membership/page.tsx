@@ -10,7 +10,7 @@ const MembershipPage = () => {
           </h1>
           <p className="max-w-5xl text-xl lg:text-3xl">
             Are you ready to{" "}
-            <span className="text-red-500 mx-1 font-extrabold text-4xl relative inline-block stroke-current">
+            <span className="text-red-500 mx-1 font-extrabold text-2xl lg:text-4xl relative inline-block stroke-current">
               invest
               <svg
                 className="absolute -bottom-0.5 w-full max-h-1.5"
@@ -26,7 +26,7 @@ const MembershipPage = () => {
             </span>{" "}
             in your physical and mental growth with us?
           </p>
-          <p className="text-3xl">
+          <p className="text-xl lg:text-3xl">
             Book a free consultation with us to see if our gym is right for you!
           </p>
 
