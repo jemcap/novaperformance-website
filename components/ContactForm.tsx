@@ -18,9 +18,9 @@ const ContactForm = () => {
   const [responseMessage, setResponseMessage] = useState("");
 
   const formStyles =
-    "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline";
+    "shadow appearance-none border rounded w-full py-3 px-8 text-gray-700 leading-tight focus:outline-none focus:shadow-outline";
 
-  const labelStyles = "block text-gray-700 text-sm font-bold mb-2";
+  const labelStyles = "block text-gray-700 text-lg lg:text-3xl font-bold mb-2";
 
   // Handle form input changes
   const handleChange = (
@@ -61,10 +61,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-5xl">
+    <div>
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="bg-white shadow-md h-full min-w-96 rounded px-8 pt-8 pb-8 mb-4"
       >
         <div className="mb-4">
           <label htmlFor="name" className={labelStyles}>
@@ -113,12 +113,14 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg  px-5 py-2.5 text-center me-2 mb-2"
+          className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2"
         >
           {isLoading ? "Sending..." : "Send Message"}
         </button>
 
-        {responseMessage && <p>{responseMessage}</p>}
+        {responseMessage && (
+          <p className="text-nova-charcoal">{responseMessage}</p>
+        )}
       </form>
     </div>
   );
