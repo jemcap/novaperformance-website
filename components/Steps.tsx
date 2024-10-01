@@ -17,7 +17,7 @@ const Steps = () => {
           <h1 className="text-4xl md:text-4xl lg:text-8xl">
             How can I <span className="text-red-500">get started?</span>
           </h1>
-          <p className="w-full max-w-2xl md:max-w-3xl text-lg md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed">
+          <p className="w-full max-w-2xl md:max-w-3xl text-xl md:text-2xl lg:text-3xl mt-4 md:mt-6 leading-relaxed">
             Getting started at Nova Performance is simple. Begin by contacting
             us to discuss your goals. From there, you'll have a 1:1 session with
             one of our expert coaches, who will help you create a personalised

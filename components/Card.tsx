@@ -31,7 +31,7 @@ const Card = () => {
               <h1 className="card-title text-2xl md:text-3xl lg:text-5xl">
                 {title}
               </h1>
-              <h2 className="text-4xl md:text-6xl lg:text-9xl font-bold text-red-700">
+              <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold text-red-700">
                 £{price}
               </h2>
               <small className="text-lg md:text-xl lg:text-3xl">

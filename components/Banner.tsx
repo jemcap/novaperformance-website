@@ -40,7 +40,7 @@ const Banner = () => {
           </p>
           <p className="flex text-base md:text-xl lg:text-2xl gap-2 items-center">
             <FaChalkboardTeacher className="text-lg md:text-2xl lg:text-3xl" />
-            Personalized coaching
+            Personalised coaching
           </p>
         </div>
       </div>

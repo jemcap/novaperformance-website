@@ -16,7 +16,7 @@ const SportsSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-4xl lg:text-7xl mb-10 drop-shadow-xl"
+          className="text-3xl lg:text-7xl mb-10 drop-shadow-xl text-center"
         >
           What sports do we specialise in?
         </motion.h1>

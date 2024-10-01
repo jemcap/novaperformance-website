@@ -19,11 +19,11 @@ const AboutPage = () => {
   return (
     <>
       <section className="relative h-screen w-full overflow-hidden">
-        <motion.h1 className="font-bold text-white text-5xl md:text-9xl absolute top-[20%] left-1/2 transform -translate-x-1/2 z-10 text-center">
+        <motion.h1 className="font-bold text-white text-8xl md:text-9xl absolute top-[20%] left-1/2 transform -translate-x-1/2 z-10 text-center">
           Our Mission
         </motion.h1>
 
-        <motion.p className="font-bold text-red-500 text-2xl md:text-4xl absolute top-[30%] left-1/2 transform -translate-x-1/2 z-10 text-center">
+        <motion.p className="font-bold text-red-500 text-2xl md:text-4xl absolute top-[35%] md:top-[40%] lg:top-[30%] left-1/2 transform -translate-x-1/2 z-10 text-center">
           We're more than just a gym.
         </motion.p>
         <motion.div

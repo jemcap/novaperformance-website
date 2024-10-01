@@ -25,8 +25,7 @@ const Sport = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-10 shadow-2xl"
           >
-            <Link
-              href={url}
+            <div
               className={`flex flex-col lg:flex-row bg-neutral-950 p-5 md:p-7 rounded-lg items-center ${
                 isEven ? "lg:flex-row-reverse" : ""
               }`}
@@ -36,7 +35,7 @@ const Sport = () => {
                 <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-8xl font-bold mb-2 text-red-500">
                   {title}
                 </h1>
-                <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4">
+                <p className="text-xl sm:text-base lg:text-3xl text-gray-300 mb-4">
                   {description}
                 </p>
               </div>
@@ -50,7 +49,7 @@ const Sport = () => {
                   alt={title}
                 />
               </div>
-            </Link>
+            </div>
           </motion.div>
         );
       })}

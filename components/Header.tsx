@@ -27,7 +27,7 @@ const Header = () => {
 
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content  bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content  bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
             >
               {NAV_LINKS.map((link) => {
                 const { id, url, text } = link;
@@ -53,15 +53,15 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div className="navbar-center hidden h-full gap-12 lg:flex">
-          <ul className="menu menu-horizontal px-1 text-white gap-4">
+        <div className="navbar-center hidden h-full gap-12 lg:flex z-10">
+          <ul className="menu menu-horizontal px-1 text-white gap-4 z-10">
             {NAV_LINKS.map((link) => {
               const { id, url, text } = link;
               return (
                 <li key={id}>
                   <Link
                     href={url}
-                    className=" text-xl text-gray-50 flex justify-center cursor-pointer pb-1.5 transition-all hover:font-bold"
+                    className="text-xl text-gray-50 active:text-red-500 focus:text-red-500 flex justify-center cursor-pointer pb-1.5 transition-all hover:font-bold"
                   >
                     {text}
                   </Link>
@@ -71,7 +71,10 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button onClick={openModal} className="btn">
+          <button
+            onClick={openModal}
+            className="btn btn-sm lg:btn-md text-xs lg:text-xl"
+          >
             Book a consultation
           </button>
         </div>

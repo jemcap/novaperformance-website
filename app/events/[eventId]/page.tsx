@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import Button from "@/components/Button";
 import { loadStripe } from "@stripe/stripe-js";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { IoLocationOutline } from "react-icons/io5";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
@@ -14,9 +16,15 @@ const EventId = ({
   searchParams,
 }: {
   params: { eventId: string };
-  searchParams: { name: string; image: string; date: string; location: string };
+  searchParams: {
+    name: string;
+    image: string;
+    date: string;
+    location: string;
+    description: string;
+  };
 }) => {
-  const { name, image, date, location } = searchParams;
+  const { name, image, date, location, description } = searchParams;
 
   const handleCheckout = async () => {
     const stripe = await stripePromise;
@@ -41,7 +49,7 @@ const EventId = ({
   };
 
   return (
-    <div className="align-elements h-screen w-screen flex items-center justify-center overflow-hidden">
+    <div className="align-elements my-8 h-full w-full md:h-screen md:w-screen flex items-center justify-center overflow-hidden">
       <div className="flex flex-col lg:flex-row items-center gap-8 ">
         <Image
           src={image}
@@ -55,18 +63,19 @@ const EventId = ({
             {name}
           </h1>
           <div className="flex gap-10">
-            <small className="text-2xl">{date}</small>
-            <small className="text-2xl">{location}</small>
+            <small className="flex gap-2 text-2xl">
+              <FaRegCalendarAlt />
+              {date}
+            </small>
+            <small className="flex gap-2 text-2xl">
+              <IoLocationOutline />
+              {location}
+            </small>
           </div>
-          <p className="max-w-5xl text-xl lg:text-3xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora,
-            velit similique quaerat pariatur ducimus autem deleniti atque! Rerum
-            sed, odit, provident dolores eveniet accusantium assumenda nam
-            perferendis non doloremque repellat dolor dolore deleniti natus
-            porro veritatis ex aspernatur illo alias aliquid voluptate amet
-            voluptatem eos! Facilis culpa maiores tempora fugit?
+          <p className="max-w-5xl text-xl lg:text-3xl">{description}</p>
+          <p className="text-3xl text-red-500">
+            Do you want to compete? Sign up below!
           </p>
-          <p className="text-2xl">Do you want to compete? Sign up below!</p>
           <Button
             type="button"
             label="Sign up"

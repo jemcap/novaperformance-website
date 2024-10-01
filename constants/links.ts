@@ -48,7 +48,7 @@ export const sportsList:Sports[] = [
     id: 1,
     title: "Weightlifting",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur odio vitae temporibus voluptas labore beatae mollitia quo quae optio.",
+      "Weightlifting focuses on the snatch and clean and jerk, demanding strength, precision, and explosive power. At Nova Performance, we are the house of Weightlifting, where athletes have won numerous awards nationwide, guided by dedicated coaches to master their lifts.",
     image: "/snatch_1.png",
     url: "/weightlifting",
   },
@@ -56,7 +56,7 @@ export const sportsList:Sports[] = [
     id: 2,
     title: "Powerlifting",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur odio vitae temporibus voluptas labore beatae mollitia quo quae optio.",
+      "Powerlifting tests raw strength through the squat, bench press, and deadlift. At Nova Performance, we empower athletes to push their limits and achieve personal bests, fostering a community of support and excellence in the pursuit of strength.",
     image: "/craig_squat.jpg",
     url: "/powerlifting",
   },
@@ -64,7 +64,7 @@ export const sportsList:Sports[] = [
     id: 3,
     title: "Strongman",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur odio vitae temporibus voluptas labore beatae mollitia quo quae optio.",
+      "Strongman is a dynamic strength sport featuring events like lifting atlas stones and pulling trucks. At Nova Performance, we embrace this thrilling challenge, training athletes to excel in both power and endurance as they compete to showcase their extraordinary strength.",
     image: "/matt_deadlift.jpg",
     url: "/strongman",
   },
@@ -77,7 +77,7 @@ export const eventsList:Events[] = [
     location: "St Ives, Cambridgeshire",
     calendar: new Date("2024-10-27"),
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur odio vitae temporibus voluptas labore beatae mollitia quo quae optio.",
+      "Join us for the Nova Powerlifting Open, where athletes compete under IPF rules with calibrated plates. This event promises an exciting showcase of strength and skill, bringing together the powerlifting community in St Ives. Don't miss your chance to witness incredible feats of strength!",
     image: "/nova_powerlifting_competition_advert_2024.png",
     url: "/powerlifting",
   },
