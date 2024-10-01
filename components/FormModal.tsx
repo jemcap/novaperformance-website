@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 type ModalProps = {
   isOpen: boolean;
@@ -10,7 +11,7 @@ type ModalProps = {
 type FormData = {
   name: string;
   email: string;
-  mobile: number | string;
+  mobile: string;
 };
 
 const formStyles =
@@ -38,24 +39,30 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     });
   };
 
-  // handle form submission (consultation inquiry)
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    try {
-      const response = await fetch("/api/send-consultation-inquiry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
 
-      if (response.ok) {
+    const emailData = {
+      name: formData.name,
+      email: formData.email,
+      mobile: formData.mobile,
+      message: `Hi there,\n\nI'm interested in joining Nova Performance, and would like to discuss options and opportunities for myself. Here are my details:\n\nName: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\n/nI look forward to hearing back from you. Thank you!\nBest regards,\n${formData.name}`,
+    };
+
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        emailData,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
+      );
+
+      if (result.status === 200) {
         setResponseMessage("Your message has been sent!");
+        setFormData({ name: "", email: "", mobile: "" }); // Reset form after successful submission
       } else {
-        setResponseMessage(`An error occured. ${data.message}`);
+        setResponseMessage("An error occurred. Please try again.");
       }
     } catch (error) {
       console.error("Error sending message:", error);
@@ -111,6 +118,7 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   className={formStyles}
                 />
               </div>
+
               <div className="mb-4">
                 <label htmlFor="mobile" className={labelStyles}>
                   Mobile
