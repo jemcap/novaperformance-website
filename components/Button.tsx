@@ -2,14 +2,14 @@ import React from "react";
 
 const Button = ({
   label,
-  url,
+
   fontSize,
   type,
   onClickHandler,
 }: {
   label: string;
   type: "button" | "submit";
-  url?: string;
+
   fontSize?: string;
   onClickHandler?: () => void;
 }) => {

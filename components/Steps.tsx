@@ -19,13 +19,14 @@ const Steps = () => {
           </h1>
           <p className="w-full max-w-2xl md:max-w-3xl text-xl md:text-2xl lg:text-3xl mt-4 md:mt-6 leading-relaxed">
             Getting started at Nova Performance is simple. Begin by contacting
-            us to discuss your goals. From there, you'll have a 1:1 session with
-            one of our expert coaches, who will help you create a personalised
-            training plan, as well as diet and nutrition guidance, tailored to
-            your needs and objectives. Once you receive your custom program,
-            you're all set to begin your journey, working towards achieving your
-            fitness goals with the best support and guidance.
+            us to discuss your goals. From there, you&apos;ll have a 1:1 session
+            with one of our expert coaches, who will help you create a
+            personalised training plan, as well as diet and nutrition guidance,
+            tailored to your needs and objectives. Once you receive your custom
+            program, you&apos;re all set to begin your journey, working towards
+            achieving your fitness goals with the best support and guidance.
           </p>
+
           <div className="mt-7">
             <Link href="/contact">
               <Button

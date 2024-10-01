@@ -35,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       );
 
       res.status(200).json({ id: session.id });
-    } catch (err) {
+    } catch (error) {
       res.status(500).json({ error: 'Error creating session' });
     }
   } else {

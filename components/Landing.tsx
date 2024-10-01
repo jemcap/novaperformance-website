@@ -62,16 +62,15 @@ const Landing = () => {
                 </span>
               </h1>
               <p className="mt-4 text-sm sm:text-lg lg:text-2xl xl:text-[2rem] text-gray-100 max-w-[800px]">
-                Train with us to unlock your strength potential! Whether you're
-                new or experienced, our expert coaches and supportive community
-                will help you push limits, build confidence, and achieve your
-                goals. Start your journey today!
+                Train with us to unlock your strength potential! Whether
+                you&apos;re new or experienced, our expert coaches and
+                supportive community will help you push limits, build
+                confidence, and achieve your goals. Start your journey today!
               </p>
               <div className="mt-7">
                 <Button
                   type="button"
                   label="Inquire today"
-                  url="/"
                   fontSize="text-xl lg:text-2xl"
                   onClickHandler={openModal}
                 />

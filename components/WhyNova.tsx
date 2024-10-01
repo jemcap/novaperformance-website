@@ -30,7 +30,7 @@ const WhyNova = () => {
           <p className="max-w-3xl mt-4">
             Our facility is equipped with high-quality, official gear for
             Powerlifting, Weightlifting, and Strongman, ensuring that all
-            athletes train with the best tools available. Whether you're a
+            athletes train with the best tools available. Whether you&apos;re a
             seasoned competitor or just starting your journey, Nova Performance
             provides everything you need to excel and reach your full potential.
           </p>

@@ -1,6 +1,7 @@
 import { testimonials } from "@/constants/links";
+import type { Testimonial } from "@/constants/links";
 
-const TestimonialItem = ({ testimonial }: { testimonial: any }) => {
+const TestimonialItem = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <li>
       <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">

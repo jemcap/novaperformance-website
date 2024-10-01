@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Button from "@/components/Button";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 
@@ -43,14 +42,11 @@ const EventsPage = () => {
                       </h1>
 
                       <div className="card-actions justify-start">
-                        <Button
-                          type="button"
-                          label="See more"
-                          url={`/events/${url}?name=${encodeURIComponent(
+                        <Link
+                          href={`/events/${url}?name=${encodeURIComponent(
                             title
                           )}`}
-                          fontSize="text-md lg:text-2xl"
-                        />
+                        ></Link>
                       </div>
                     </div>
                   </div>

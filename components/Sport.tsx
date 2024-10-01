@@ -2,19 +2,20 @@
 
 import React, { useRef } from "react";
 import { sportsList } from "@/constants/links";
-import Link from "next/link";
 import Image from "next/image";
-import Button from "./Button";
 import { motion, useInView } from "framer-motion";
 
 const Sport = () => {
+  const refs = sportsList.map(() => useRef(null));
+  const inViewArray = refs.map((ref) => useInView(ref, { once: true }));
+
   return (
     <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
-        const { title, description, image, url } = item;
+        const { title, description, image } = item;
         const isEven = index % 2 === 1;
-        const ref = useRef(null);
-        const inView = useInView(ref, { once: true });
+        const ref = refs[index];
+        const inView = inViewArray[index];
 
         return (
           <motion.div

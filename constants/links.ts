@@ -30,6 +30,12 @@ type Members = {
   social?:string;
 }
 
+export type Testimonial = {
+  quote: string;
+  name: string;
+  image: string;
+}
+
 interface Events extends Sports {
   location: string;
   calendar: Date;
@@ -162,7 +168,7 @@ export const teamList:Members[] = [
 ]
 
 
-export const testimonials = [
+export const testimonials:Testimonial[] = [
     {
       quote:
         "Such a great community feel. Everybody is so encouraging and welcoming. I joined Nova to get into Powerlifting and it has been nothing but a positive experience. I have been working with Craig as my PT for about 2 months now and my training has come on leaps and bounds. He is very knowledge and programming is provided promptly.",

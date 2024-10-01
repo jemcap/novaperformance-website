@@ -14,7 +14,6 @@ const AboutPage = () => {
     offset: ["start start", "end start"],
   });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "350%"]);
 
   return (
     <>
@@ -24,7 +23,7 @@ const AboutPage = () => {
         </motion.h1>
 
         <motion.p className="font-bold text-red-500 text-2xl md:text-4xl absolute top-[35%] md:top-[40%] lg:top-[30%] left-1/2 transform -translate-x-1/2 z-10 text-center">
-          We're more than just a gym.
+          We&apos;re more than just a gym.
         </motion.p>
         <motion.div
           className="absolute inset-0 z-0"
