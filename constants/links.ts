@@ -27,6 +27,7 @@ type Members = {
   role:string;
   url?:string;
   img?:string;
+  social?:string;
 }
 
 interface Events extends Sports {
@@ -113,43 +114,50 @@ export const teamList:Members[] = [
     id: 1,
     name: "Adam Smith",
     role: "Gym Owner / Head Coach",
-    img: "/adam_1.png"
+    img: "/adam_1.png",
+    social: "thicc__astley/"
   },
   {
     id: 2,
     name: "Craig Taylor",
     role: "Head Powerlifting Coach",
-    img: "/craig_2.png"
+    img: "/craig_2.png",
+    social: "cmt_coaching/"
   },
   {
     id: 3,
     name: "Matt Nice",
     role: "Head Strongman Coach",
-    img: "/matt_1.png"
+    img: "/matt_1.png",
+    social: "cambridge_strength_coaching/"
   },
   {
     id: 4,
     name: "Lily Yu",
     role: "Weightlifting Coach",
-    img: "/lily_yu_1.png"
+    img: "/lily_yu_1.png",
+    social: "coach_yustrength/"
   },
   {
     id: 5,
     name: "Tiago Costa",
     role: "Weightlifting Coach",
-    img: "/tiago_1.png"
+    img: "/tiago_1.png",
+    social: "tdotlifting/"
   },
   {
     id: 6,
     name: "Sam Evans",
     role: "Weightlifting Coach",
-    img: "/sam_1.png"
+    img: "/sam_1.png",
+    social: "sevanstraining/"
   },
   {
     id: 7,
     name: "Isaac Leatherland",
     role: "Physiotherapist / Powerlifting Coach",
-    img: "/isaac_1.png"
+    img: "/isaac_1.png",
+    social: "ijlclinic_coaching/"
   }
 ]
 

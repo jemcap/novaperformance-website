@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./styles.css";
 import { teamList } from "@/constants/links";
+import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
 
 const AboutPage = () => {
   const textRef = useRef(null);
@@ -43,8 +45,8 @@ const AboutPage = () => {
         />
       </section>
       <section className="max-w-5xl mx-auto my-10 p-4 text-center">
-        <p className="text-xl md:text-2xl">
-          Nova Performance is a Weightlifting and Powerlifting facility. Nova
+        <p className="text-2xl lg:text-4xl">
+          Nova Performance is a specialised strength sports facility. Nova
           prides itself on the community atmosphere encouraged among all members
           that allows each member to perform to their best. Nova Performance
           offers: Small group training, personal training, tailored lifting
@@ -55,10 +57,10 @@ const AboutPage = () => {
         </p>
       </section>
       <section className="align-elements text-center">
-        <h1 className="text-4xl font-bold mb-5">Meet the Team</h1>
+        <h1 className="text-6xl font-bold mb-5 text-red-500">Meet the Team</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {teamList.map((member, index) => {
-            const { id, name, role, img } = member;
+            const { id, name, role, img, social } = member;
             return (
               <div key={id} className="card bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
@@ -71,6 +73,12 @@ const AboutPage = () => {
                 <div className="card-body items-center">
                   <h2 className="card-title text-nova-charcoal">{name}</h2>
                   <p className="text-nova-charcoal">{role}</p>
+                  <Link
+                    href={`https://www.instagram.com/${social}`}
+                    target="_blank"
+                  >
+                    <FaInstagram className="text-2xl text-nova-charcoal" />
+                  </Link>
                 </div>
               </div>
             );

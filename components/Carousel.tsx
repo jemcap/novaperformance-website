@@ -1,59 +1,35 @@
 import Image from "next/image";
 
 const Carousel = () => {
+  const heroImages: string[] = [
+    "/carousel_img_1.png",
+    "/carousel_img_2.png",
+    "/carousel_img_3.png",
+    "/nova_group.jpg",
+    "/carousel_img_4.png",
+    "/carousel_img_5.png",
+    "/carousel_img_6.png",
+    "/carousel_img_7.png",
+    "/carousel_img_8.png",
+    "/carousel_img_9.png",
+    "/carousel_img_10.png",
+    "/carousel_img_11.png",
+    "/carousel_img_14.png",
+  ];
   return (
-    <div className="carousel rounded-box h-auto w-4/12">
-      {/* map over images */}
-      <div className="carousel-item w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-          className="w-full"
-          alt="Tailwind CSS Carousel component"
+    <div className="hidden lg:block columns-2 md:columns-3 gap-5 space-y-5">
+      {heroImages.map((image, i) => (
+        <Image
+          key={i}
+          src={image}
+          alt={`Gallery Image ${i + 1}`}
+          width={240}
+          height={240}
+          priority
+          className="w-60 mb-4 rounded-lg break-inside-avoid h-auto relative z-0 transition-all duration-300 hover:scale-110"
+          aria-label="images of furnitures"
         />
-      </div>
-      {/*  */}
-      <div className="carousel-item w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-          className="w-full"
-          alt="Tailwind CSS Carousel component"
-        />
-      </div>
-      <div className="carousel-item w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-          className="w-full"
-          alt="Tailwind CSS Carousel component"
-        />
-      </div>
-      <div className="carousel-item w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-          className="w-full"
-          alt="Tailwind CSS Carousel component"
-        />
-      </div>
-      <div className="carousel-item w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-          className="w-full"
-          alt="Tailwind CSS Carousel component"
-        />
-      </div>
-      <div className="carousel-item w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-          className="w-full"
-          alt="Tailwind CSS Carousel component"
-        />
-      </div>
-      <div className="carousel-item w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-          className="w-full"
-          alt="Tailwind CSS Carousel component"
-        />
-      </div>
+      ))}
     </div>
   );
 };
