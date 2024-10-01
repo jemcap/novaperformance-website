@@ -1,58 +1,17 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
 import { sportsList } from "@/constants/links";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-
-// Custom hook to use InView
-const useInViewRef = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true });
-  return { ref, inView }; // Return ref and inView as an object
-};
 
 const Sport = () => {
-  // Create an array to store refs and inView states
-  const refs = useRef<(HTMLDivElement | null)[]>(
-    new Array(sportsList.length).fill(null)
-  );
-  const inViewStates = useRef<boolean[]>(
-    new Array(sportsList.length).fill(false)
-  );
-
-  // Create an array of refs and inView states
-  const inViewData = useRef(
-    sportsList.map(() => {
-      const { ref, inView } = useInViewRef();
-      return { ref, inView };
-    })
-  );
-
-  // Use effect to store the current refs
-  useEffect(() => {
-    inViewData.current.forEach((data, index) => {
-      refs.current[index] = data.ref.current;
-      inViewStates.current[index] = data.inView;
-    });
-  }, []);
-
   return (
     <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
         const { title, description, image } = item;
         const isEven = index % 2 === 1;
-        const { ref, inView } = inViewData.current[index]; // Access the ref and inView state from the ref array
 
         return (
-          <motion.div
-            key={title}
-            ref={ref}
-            initial={{ opacity: 0, x: isEven ? 200 : -200 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-10 shadow-2xl"
-          >
+          <div key={title} className="mb-10 shadow-2xl">
             <div
               className={`flex flex-col lg:flex-row bg-neutral-950 p-5 md:p-7 rounded-lg items-center ${
                 isEven ? "lg:flex-row-reverse" : ""
@@ -78,7 +37,7 @@ const Sport = () => {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
         );
       })}
     </div>
