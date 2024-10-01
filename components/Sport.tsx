@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { sportsList } from "@/constants/links";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
@@ -13,6 +13,7 @@ const useInViewRef = () => {
 };
 
 const Sport = () => {
+  // Create an array to store refs and inView states
   const refs = useRef<(HTMLDivElement | null)[]>(
     new Array(sportsList.length).fill(null)
   );
@@ -20,20 +21,28 @@ const Sport = () => {
     new Array(sportsList.length).fill(false)
   );
 
-  // Store refs and inView states in a separate array
-  const inViewData = sportsList.map((item, index) => {
-    const { ref, inView } = useInViewRef();
-    refs.current[index] = ref.current;
-    inViewStates.current[index] = inView;
-    return { ref, inView };
-  });
+  // Create an array of refs and inView states
+  const inViewData = useRef(
+    sportsList.map(() => {
+      const { ref, inView } = useInViewRef();
+      return { ref, inView };
+    })
+  );
+
+  // Use effect to store the current refs
+  useEffect(() => {
+    inViewData.current.forEach((data, index) => {
+      refs.current[index] = data.ref.current;
+      inViewStates.current[index] = data.inView;
+    });
+  }, []);
 
   return (
     <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
         const { title, description, image } = item;
         const isEven = index % 2 === 1;
-        const { ref, inView } = inViewData[index]; // Get the ref and inView state from the array
+        const { ref, inView } = inViewData.current[index]; // Access the ref and inView state from the ref array
 
         return (
           <motion.div
