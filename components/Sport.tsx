@@ -20,16 +20,20 @@ const Sport = () => {
     new Array(sportsList.length).fill(false)
   );
 
+  // Store refs and inView states in a separate array
+  const inViewData = sportsList.map((item, index) => {
+    const { ref, inView } = useInViewRef();
+    refs.current[index] = ref.current;
+    inViewStates.current[index] = inView;
+    return { ref, inView };
+  });
+
   return (
     <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
         const { title, description, image } = item;
         const isEven = index % 2 === 1;
-
-        const { ref, inView } = useInViewRef();
-
-        refs.current[index] = ref.current;
-        inViewStates.current[index] = inView;
+        const { ref, inView } = inViewData[index]; // Get the ref and inView state from the array
 
         return (
           <motion.div
