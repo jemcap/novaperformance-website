@@ -11,7 +11,6 @@ type FormData = {
   name: string;
   email: string;
   mobile: number | string;
-  message: string;
 };
 
 const formStyles =
@@ -24,7 +23,6 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     name: "",
     email: "",
     mobile: "",
-    message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
@@ -68,7 +66,7 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
         <div className="modal-box w-11/12 max-w-5xl">
           <div>
             <div className="text-nova-charcoal text-center">
@@ -121,19 +119,6 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   id="mobile"
                   name="mobile"
                   value={formData.mobile}
-                  onChange={handleChange}
-                  required
-                  className={formStyles}
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="message" className={labelStyles}>
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
                   onChange={handleChange}
                   required
                   className={formStyles}

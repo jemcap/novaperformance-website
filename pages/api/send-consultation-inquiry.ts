@@ -8,10 +8,10 @@ type ResponseData = {
 
 export default async function handler(req: NextApiRequest, res:NextApiResponse<ResponseData>) {
     if (req.method === "POST") {
-        const {name, email, mobile, message} = req.body
+        const {name, email, mobile} = req.body
 
-        if (!name || !email || !mobile || !message) {
-            res.status(400).json({ message: "Invalid Form Data. Please input valid data"});
+        if (!name || !email || !mobile) {
+            res.status(400).json({ message: "Invalid Form Data"});
             return;
         }
 
@@ -27,8 +27,8 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse<R
             await transporter.sendMail({
               from: email,
               to: process.env.RECIPIENT_EMAIL, 
-              subject: `New Consultation Inquiry from ${name}`,
-              text: `${message}\n\nPlease contact me through either my email: ${email} or my mobile: ${mobile}` ,
+              subject: `Potential Client — New Consultation Inquiry from ${name}`,
+              text: `Hello,\n\nI'm interested in joining Nova Performance and would love to discuss membership options that best suit my needs.\n\nPlease feel free to reach out at your earliest convenience via:\n\nEmail: ${email}\n\nMobile: ${mobile}\n\nI look forward to hearing from you. Thank you!\n\nBest regards,\n\n${name}`,
             });
       
             res.status(200).json({ message: "Email sent successfully!" });

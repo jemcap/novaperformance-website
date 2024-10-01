@@ -1,10 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FaBarsStaggered } from "react-icons/fa6";
 import NovaLogo from "@/public/WhiteNP.png";
 import { NAV_LINKS } from "@/constants/links";
+import { useState } from "react";
+import FormModal from "./FormModal";
 
 const Header = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <nav className=" bg-nova-charcoal flex  relative z-30 py-1">
       <div className="navbar align-elements">
@@ -64,9 +71,12 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn">Book a consultation</button>
+          <button onClick={openModal} className="btn">
+            Book a consultation
+          </button>
         </div>
       </div>
+      <FormModal isOpen={isModalOpen} onClose={closeModal} />
     </nav>
   );
 };
