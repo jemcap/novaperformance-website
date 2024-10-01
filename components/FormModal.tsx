@@ -43,13 +43,16 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch("/api/send-consultation-inquiry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/send-consultation-inquiry`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await response.json();
 
       if (response.ok) {
