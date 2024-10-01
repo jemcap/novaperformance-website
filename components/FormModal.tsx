@@ -47,7 +47,7 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       name: formData.name,
       email: formData.email,
       mobile: formData.mobile,
-      message: `Hi there,\n\nI'm interested in joining Nova Performance, and would like to discuss options and opportunities for myself. Here are my details:\n\nName: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\n/nI look forward to hearing back from you. Thank you!\nBest regards,\n${formData.name}`,
+      message: `Hi there,\n\nI'm interested in joining Nova Performance, and would like to discuss options and opportunities for myself. Here are my details:\n\nName: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\n\nI look forward to hearing back from you. Thank you!\n\nBest regards,\n${formData.name}`,
     };
 
     try {
