@@ -6,9 +6,11 @@ const ContactPage = () => {
     <div className="align-elements h-screen w-screen flex items-center justify-center overflow-hidden">
       <div className="align-elements flex flex-col justify-center items-center">
         <div>
-          <h1 className="lg:text-8xl mb-9">Contact Us</h1>
+          <h1 className="text-5xl text-center lg:text-left lg:text-8xl mb-8">
+            Contact Us
+          </h1>
         </div>
-        <div className="flex gap-8 justify-center items-center">
+        <div className="flex gap-8 flex-col text-center lg:text-start lg:flex-row justify-center items-center">
           <div>
             <ContactForm />
           </div>
@@ -28,6 +30,9 @@ const ContactPage = () => {
             </p>
             <p>+447845 718581</p>
           </aside>
+        </div>
+        <div>
+          <h1>Stay updated with Nova Performance on Instagram</h1>
         </div>
       </div>
     </div>

@@ -66,6 +66,7 @@ const EventId = ({
             porro veritatis ex aspernatur illo alias aliquid voluptate amet
             voluptatem eos! Facilis culpa maiores tempora fugit?
           </p>
+          <p className="text-2xl">Do you want to compete? Sign up below!</p>
           <Button
             type="button"
             label="Sign up"

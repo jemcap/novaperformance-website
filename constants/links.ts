@@ -154,4 +154,25 @@ export const teamList:Members[] = [
 ]
 
 
+export const testimonials = [
+    {
+      quote:
+        "Such a great community feel. Everybody is so encouraging and welcoming. I joined Nova to get into Powerlifting and it has been nothing but a positive experience. I have been working with Craig as my PT for about 2 months now and my training has come on leaps and bounds. He is very knowledge and programming is provided promptly.",
+      name: "Emma Hobbes",
+      image: "https://randomuser.me/api/portraits/women/12.jpg",
+    },
+    {
+      quote:
+        "Amazing gym. Really friendly and supportive coaches and clietele. The classes are greate, good variety of different types of weightlifting including strongman, powerlifting and Olympic lifting. I've been going there since it opened and couldn't imagine a better training environment",
+      name: "Kim Parish",
+      image: "https://randomuser.me/api/portraits/women/15.jpg",
+    },
+    {
+      quote:
+        "Fantastic gym and facilities. Parking right outside. Very supportive and friendly vibe. Zero hostility and just the right amount of tough encouragement. It's a gym with a very inclusive and welcoming atmosphere. The standard of coaching is very high. I train mainly with gym owner Adam Smith who is technically very skilled and brings the best out of his athletes. I would highly recommend this gym whatever level your lifting or fitness ambitions. They will have a style of coaching that suits you.",
+      name: "David Evans",
+      image: "https://randomuser.me/api/portraits/men/10.jpg",
+    },
+  ];
+
 

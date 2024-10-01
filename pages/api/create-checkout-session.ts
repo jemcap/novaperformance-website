@@ -14,6 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // Create a Checkout Session
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
+
         line_items: [
           {
             price_data: {
@@ -29,8 +30,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ],
         mode: 'payment',
         success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${req.headers.origin}/events/${eventId}`,
-      });
+        cancel_url: `${req.headers.origin}/events/${eventId}`
+        }
+      );
 
       res.status(200).json({ id: session.id });
     } catch (err) {

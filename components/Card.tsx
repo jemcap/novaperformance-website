@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { membership } from "@/constants/links";
 import Button from "./Button";
