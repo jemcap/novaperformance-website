@@ -9,16 +9,27 @@ import { motion, useInView } from "framer-motion";
 const useInViewRef = () => {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true });
-  return [ref, inView] as const; // Return ref and inView as a tuple
+  return { ref, inView }; // Return ref and inView as an object
 };
 
 const Sport = () => {
+  const refs = useRef<(HTMLDivElement | null)[]>(
+    new Array(sportsList.length).fill(null)
+  );
+  const inViewStates = useRef<boolean[]>(
+    new Array(sportsList.length).fill(false)
+  );
+
   return (
     <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
         const { title, description, image } = item;
         const isEven = index % 2 === 1;
-        const [ref, inView] = useInViewRef(); // Use the custom hook
+
+        const { ref, inView } = useInViewRef();
+
+        refs.current[index] = ref.current;
+        inViewStates.current[index] = inView;
 
         return (
           <motion.div
