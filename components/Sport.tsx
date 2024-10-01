@@ -5,17 +5,20 @@ import { sportsList } from "@/constants/links";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
-const Sport = () => {
-  const refs = useRef(sportsList.map(() => React.createRef<HTMLDivElement>()));
-  const inViewArray = refs.current.map((ref) => useInView(ref, { once: true }));
+// Custom hook to use InView
+const useInViewRef = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true });
+  return [ref, inView] as const; // Return ref and inView as a tuple
+};
 
+const Sport = () => {
   return (
     <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
         const { title, description, image } = item;
         const isEven = index % 2 === 1;
-        const ref = refs.current[index];
-        const inView = inViewArray[index];
+        const [ref, inView] = useInViewRef(); // Use the custom hook
 
         return (
           <motion.div
