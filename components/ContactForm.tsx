@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 type FormData = {
   name: string;
@@ -32,26 +33,29 @@ const ContactForm = () => {
     });
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
+    const emailData = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
     try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_GENERAL_INQUIRY_TEMPLATE_ID as string,
+        emailData,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
+      );
 
-      const data = await response.json();
-
-      if (response.ok) {
+      if (result.status === 200) {
         setResponseMessage("Your message has been sent!");
+        setFormData({ name: "", email: "", message: "" }); // Reset form after successful submission
       } else {
-        setResponseMessage(`Error: ${data.message}`);
+        setResponseMessage("An error occurred. Please try again.");
       }
     } catch (error) {
       console.error("Error sending message:", error);
