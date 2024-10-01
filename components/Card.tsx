@@ -3,8 +3,15 @@
 import Image from "next/image";
 import { membership } from "@/constants/links";
 import Button from "./Button";
+import { useState } from "react";
+import FormModal from "./FormModal";
 
 const Card = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="flex flex-wrap justify-center gap-6">
       {membership.map((item) => {
@@ -40,12 +47,14 @@ const Card = () => {
                   type="button"
                   label="Book a consultation"
                   fontSize="text-sm md:text-lg lg:text-2xl"
+                  onClickHandler={openModal}
                 />
               </div>
             </div>
           </div>
         );
       })}
+      <FormModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

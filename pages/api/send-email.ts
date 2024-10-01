@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   if (req.method === "POST") {
     const { name, email, message } = req.body;
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message ) {
         res.status(400).json({ message: "Invalid form data." });
         return;
       }

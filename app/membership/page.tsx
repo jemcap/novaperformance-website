@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import FormModal from "@/components/FormModal";
 
 const MembershipPage = () => {
   return (
