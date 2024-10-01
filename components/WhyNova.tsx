@@ -20,12 +20,18 @@ const WhyNova = () => {
           Why <span className="text-red-500">Nova Performance?</span>
         </h1>
         <p className="max-w-3xl text-2xl">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-          doloribus a asperiores natus quaerat laudantium vel. Explicabo
-          dignissimos commodi animi corporis sed? Culpa nisi eaque quaerat nam
-          cum odio, pariatur quia vel, temporibus inventore quae, labore iure.
-          Sed facilis possimus illo accusamus, minima eos facere, dolore
-          asperiores, odit harum officiis.
+          At Nova Performance, we pride ourselves on offering an amazing
+          environment and support system where everyone is encouraged to push
+          beyond their limits, both in and out of the gym. As an award-winning
+          gym specialising in strength sports, we foster a sense of community
+          that thrives on mutual encouragement and personal growth.
+        </p>
+        <p className="max-w-3xl text-2xl mt-4">
+          Our facility is equipped with high-quality, official gear for
+          Powerlifting, Weightlifting, and Strongman, ensuring that all athletes
+          train with the best tools available. Whether you're a seasoned
+          competitor or just starting your journey, Nova Performance provides
+          everything you need to excel and reach your full potential.
         </p>
       </div>
       <Carousel />
