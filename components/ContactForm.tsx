@@ -54,6 +54,7 @@ const ContactForm = () => {
         setResponseMessage(`Error: ${data.message}`);
       }
     } catch (error) {
+      console.error("Error sending message:", error);
       setResponseMessage("An error occurred. Please try again later.");
     } finally {
       setIsLoading(false);

@@ -6,15 +6,15 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
 const Sport = () => {
-  const refs = sportsList.map(() => useRef(null));
-  const inViewArray = refs.map((ref) => useInView(ref, { once: true }));
+  const refs = useRef(sportsList.map(() => React.createRef<HTMLDivElement>()));
+  const inViewArray = refs.current.map((ref) => useInView(ref, { once: true }));
 
   return (
     <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
         const { title, description, image } = item;
         const isEven = index % 2 === 1;
-        const ref = refs[index];
+        const ref = refs.current[index];
         const inView = inViewArray[index];
 
         return (

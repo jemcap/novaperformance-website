@@ -58,6 +58,7 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         setResponseMessage(`An error occured. ${data.message}`);
       }
     } catch (error) {
+      console.error("Error sending message:", error);
       setResponseMessage("An error occurred. Please try again later.");
     } finally {
       setIsLoading(false);

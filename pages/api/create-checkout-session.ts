@@ -36,6 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       res.status(200).json({ id: session.id });
     } catch (error) {
+      console.error("Error creating Stripe checkout session:", error);
       res.status(500).json({ error: 'Error creating session' });
     }
   } else {
