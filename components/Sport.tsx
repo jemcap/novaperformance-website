@@ -2,8 +2,12 @@
 
 import { sportsList } from "@/constants/links";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Sport = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
   return (
     <div className="container mx-auto px-4">
       {sportsList.map((item, index) => {
@@ -11,7 +15,14 @@ const Sport = () => {
         const isEven = index % 2 === 1;
 
         return (
-          <div key={title} className="mb-10 shadow-2xl">
+          <motion.div
+            key={title}
+            className="mb-10 shadow-2xl"
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <div
               className={`flex flex-col lg:flex-row bg-neutral-950 p-5 md:p-7 rounded-lg items-center ${
                 isEven ? "lg:flex-row-reverse" : ""
@@ -37,7 +48,7 @@ const Sport = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </div>

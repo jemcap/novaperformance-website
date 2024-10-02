@@ -73,7 +73,7 @@ const Header = () => {
         <div className="navbar-end">
           <button
             onClick={openModal}
-            className="btn btn-sm lg:btn-md text-xs lg:text-xl"
+            className="btn btn-xs lg:btn-sm text-xs lg:text-lg"
           >
             Book a consultation
           </button>

@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { teamList } from "@/constants/links";
 import Link from "next/link";
+import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 
 const AboutPage = () => {
@@ -68,9 +69,11 @@ const AboutPage = () => {
             return (
               <div key={id} className="card bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                  <img
-                    src={img}
+                  <Image
+                    src={img || "/WhiteNP.png"}
                     alt={`Team Member ${index + 1}`}
+                    width={400} // set an appropriate width
+                    height={400}
                     className="rounded-xl w-full h-64 object-cover"
                   />
                 </figure>

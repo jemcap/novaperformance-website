@@ -1,10 +1,22 @@
+"use client";
+
 import Link from "next/link";
 import Button from "./Button";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Steps = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
   return (
     <section className=" bg-neutral-900 ">
-      <div className="flex flex-row text-center md:text-start h-[750px] md:h-5/6 justify-between align-elements items-center">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, x: -200 }}
+        animate={inView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="flex flex-row text-center md:text-start h-[750px] md:h-5/6 justify-between align-elements items-center"
+      >
         <div>
           <ul className="max-md:hidden steps steps-vertical text-xl h-[600px] lg:text-3xl lg:h-[1000px]">
             <li className="step">Contact us</li>
@@ -37,7 +49,7 @@ const Steps = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
