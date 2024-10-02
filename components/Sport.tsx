@@ -44,6 +44,8 @@ const Sport = () => {
                   className="object-cover rounded-lg"
                   src={image}
                   fill
+                  priority
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   alt={title}
                 />
               </div>
