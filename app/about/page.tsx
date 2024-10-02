@@ -2,7 +2,6 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import "./styles.css";
 import { teamList } from "@/constants/links";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
@@ -18,13 +17,14 @@ const AboutPage = () => {
   return (
     <>
       <section className="relative h-screen w-full overflow-hidden">
-        <motion.h1 className="font-bold text-white text-8xl md:text-9xl absolute top-[20%] left-1/2 transform -translate-x-1/2 z-10 text-center">
+        <motion.h1 className="font-bold text-white text-5xl sm:text-6xl md:text-8xl lg:text-9xl absolute top-[20%] left-1/2 transform -translate-x-1/2 z-10 text-center">
           Our Mission
         </motion.h1>
 
-        <motion.p className="font-bold text-red-500 text-2xl md:text-4xl absolute top-[35%] md:top-[40%] lg:top-[30%] left-1/2 transform -translate-x-1/2 z-10 text-center">
+        <motion.p className="font-bold text-red-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl absolute top-[35%] md:top-[40%] lg:top-[30%] left-1/2 transform -translate-x-1/2 z-10 text-center">
           We&apos;re more than just a gym.
         </motion.p>
+
         <motion.div
           className="absolute inset-0 z-0"
           style={{
@@ -34,6 +34,7 @@ const AboutPage = () => {
             y: backgroundY,
           }}
         />
+
         <div
           className="absolute inset-0 z-20"
           style={{
@@ -43,8 +44,9 @@ const AboutPage = () => {
           }}
         />
       </section>
-      <section className="max-w-5xl mx-auto my-10 p-4 text-center">
-        <p className="text-2xl lg:text-4xl">
+
+      <section className="max-w-4xl md:max-w-5xl mx-auto my-8 md:my-10 p-4 text-center">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl">
           Nova Performance is a specialised strength sports facility. Nova
           prides itself on the community atmosphere encouraged among all members
           that allows each member to perform to their best. Nova Performance
@@ -55,9 +57,12 @@ const AboutPage = () => {
           best version of yourself.
         </p>
       </section>
-      <section className="align-elements text-center">
-        <h1 className="text-6xl font-bold mb-5 text-red-500">Meet the Team</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+      <section className="text-center my-10">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-red-500">
+          Meet the Team
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {teamList.map((member, index) => {
             const { id, name, role, img, social } = member;
             return (
@@ -66,7 +71,7 @@ const AboutPage = () => {
                   <img
                     src={img}
                     alt={`Team Member ${index + 1}`}
-                    className="rounded-xl max-w-80 max-h-80"
+                    className="rounded-xl w-full h-64 object-cover"
                   />
                 </figure>
                 <div className="card-body items-center">
