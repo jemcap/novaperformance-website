@@ -27,8 +27,8 @@ const Card = () => {
                 className="w-full h-auto object-contain"
               />
             </figure>
-            <div className="card-body text-center text-nova-charcoal">
-              <h1 className="card-title text-2xl md:text-3xl lg:text-5xl">
+            <div className="card-body items-center text-nova-charcoal">
+              <h1 className="card-title text-center text-2xl md:text-3xl lg:text-5xl">
                 {title}
               </h1>
               <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold text-red-700">
