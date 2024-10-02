@@ -1,37 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nova Performance
 
-## Getting Started
+## Overview
 
-First, run the development server:
+**Nova Performance** is an independent gym and strength sports facility. This project involved the redesign and rebuild of the website as a full-stack application to enhance user experience and engagement.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Motivations
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Freelance project opportunity**: Opportunity to redesign and rebuild the current Nova Performance website, and gain exposure to freelancing; collaborating with clients
+- **Enhance User Engagement**: Create an interactive and engaging platform that reflects the vibrant community and services offered by Nova Performance.
+- **Showcase Services**: Provide clear and accessible information about gym memberships, training programs, and events to attract new clients.
+- **Streamline the Checkout Process**: Implement secure and efficient payment options to simplify the purchasing experience for users.
+- **Utilize Modern Technologies**: Leverage contemporary web development technologies to ensure a fast, responsive, and visually appealing user experience.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: A React framework for building server-rendered applications.
+- **TypeScript**: For type safety and improved development experience.
+- **TailwindCSS**: A utility-first CSS framework for responsive design.
+- **Framer Motion**: For animations and smooth transitions.
+- **Stripe API**: To facilitate secure checkout sessions.
+- **EmailJS SDK**: To send emails directly from form submissions.
 
-## Learn More
+## Project Description
 
-To learn more about Next.js, take a look at the following resources:
+This project aimed to create a functional and visually appealing website for Nova Performance, providing users with a seamless browsing and purchasing experience for gym memberships and services.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **User-Friendly Interface**: A clean, intuitive design that enhances user interaction.
+- **Responsive Design**: Fully responsive layout to ensure accessibility on all devices, thanks to TailwindCSS.
+- **Smooth Animations**: Engaging user experience with animations powered by Framer Motion.
+- **Secure Checkout**: Stripe API integration for safe and efficient payment processing.
+- **Email Notifications**: Automated email responses upon form submissions using EmailJS.
 
-## Deploy on Vercel
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To set up the project locally, follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# novaperformance-website
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/nova-performance.git
+   ```
+2. **Navigate to the project directory:**
+   ```bash
+   cd nova-performance
+   ```
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+4. **Set up environment variables**: Create a `.env.local` file in the project root and add your environment variables as follows:
+   ```bash
+   STRIPE_API_KEY=<your_stripe_api_key>
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID=<your_api_key>
+    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=<your_api_key>
+    NEXT_PUBLIC_EMAILJS_GENERAL_INQUIRY_TEMPLATE_ID=<your_api_key>
+    NEXT_PUBLIC_EMAILJS_USER_ID=<your_api_key>
+   ```
+5. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for new features, improvements, or bug fixes, please submit a pull request or open an issue on GitHub.
+
+### How to Contribute
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, please contact [joshuaecapito22@gmail.com](mailto:joshuaecapito22@gmail.com).
