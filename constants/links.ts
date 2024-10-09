@@ -87,16 +87,6 @@ export const eventsList:Events[] = [
     image: "/nova_powerlifting_competition_advert_2024.png",
     url: "/powerlifting",
   },
-  {
-    id: 2,
-    title: "Nova Weightlifting Winter Open",
-    location: "St Ives, Cambridgeshire",
-    calendar: new Date("2024-12-10"),
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur odio vitae temporibus voluptas labore beatae mollitia quo quae optio.",
-    image: "/nova_powerlifting_competition_advert_2024.png",
-    url: "/weightlifting",
-  },
 
 ]
 
