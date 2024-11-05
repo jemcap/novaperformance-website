@@ -79,12 +79,22 @@ export const sportsList:Sports[] = [
 export const eventsList:Events[] = [
   {
     id: 1,
-    title: "Nova Powerlifting Open",
+    title: "Nova Winter Open",
     location: "St Ives, Cambridgeshire",
-    calendar: new Date("2024-10-27"),
+    calendar: new Date("2024-12-12"),
     description:
       "Join us for the Nova Powerlifting Open, where athletes compete under IPF rules with calibrated plates. This event promises an exciting showcase of strength and skill, bringing together the powerlifting community in St Ives. Don't miss your chance to witness incredible feats of strength!",
-    image: "/nova_powerlifting_competition_advert_2024.png",
+    image: "/snatch_adam.jpg",
+    url: "/powerlifting",
+  },
+  {
+    id: 2,
+    title: "Nova Powerlifting Open",
+    location: "St Ives, Cambridgeshire",
+    calendar: new Date("2025-03-15"),
+    description:
+      "Join us for the Nova Powerlifting Open, where athletes compete under IPF rules with calibrated plates. This event promises an exciting showcase of strength and skill, bringing together the powerlifting community in St Ives. Don't miss your chance to witness incredible feats of strength!",
+    image: "/sumo_dl.png",
     url: "/powerlifting",
   },
 
