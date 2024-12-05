@@ -44,7 +44,7 @@ const Landing = () => {
             </video>
             <div className="absolute inset-0 bg-black opacity-75"></div>
             <div className="content absolute inset-0 flex flex-col items-center lg:items-start top-[40%] text-start align-elements">
-              <h1 className="content-heading text-3xl font-bold text-white md:text-4xl lg:text-6xl">
+              <h1 className="content-heading text-center lg:text-start text-3xl font-bold text-white md:text-4xl lg:text-6xl">
                 Are you ready to{" "}
                 <span className="text-red-500 mx-1 font-extrabold relative inline-block stroke-current">
                   Get strong?
