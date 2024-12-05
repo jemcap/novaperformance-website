@@ -10,7 +10,7 @@ const EventsPage = () => {
     <div className=" h-screen relative w-screen overflow-hidden">
       <div className="align-elements">
         <div>
-          <h1 className="text-6xl md:text-7xl lg:text-8xl mb-10 drop-shadow-xl text-center my-10">
+          <h1 className="text-5xl mb-10 drop-shadow-xl text-center my-10">
             Upcoming events
           </h1>
           <div>
@@ -37,7 +37,7 @@ const EventsPage = () => {
                           {location}
                         </small>
                       </div>
-                      <h1 className="text-white card-title text-3xl lg:text-5xl">
+                      <h1 className="text-white card-title text-3xl lg:text-4xl">
                         {title}
                       </h1>
 

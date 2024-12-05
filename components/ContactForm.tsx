@@ -21,7 +21,7 @@ const ContactForm = () => {
   const formStyles =
     "shadow appearance-none border rounded w-full py-3 px-8 text-gray-700 leading-tight focus:outline-none focus:shadow-outline";
 
-  const labelStyles = "block text-gray-700 text-lg lg:text-3xl font-bold mb-2";
+  const labelStyles = "block text-gray-700 text-lg lg:text-2xl font-bold mb-2";
 
   // Handle form input changes
   const handleChange = (

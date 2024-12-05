@@ -16,10 +16,10 @@ const WhyNova = () => {
       className="flex flex-col items-center text-center lg:flex-row lg:justify-between align-elements my-20 gap-10"
     >
       <div>
-        <h1 className="text-4xl lg:text-8xl">
+        <h1 className="text-4xl lg:text-6xl">
           Why <span className="text-red-500">Nova Performance?</span>
         </h1>
-        <div className="text-xl md:text-3xl">
+        <div className="text-xl md:text-xl">
           <p className="max-w-3xl">
             At Nova Performance, we pride ourselves on offering an amazing
             environment and support system where everyone is encouraged to push

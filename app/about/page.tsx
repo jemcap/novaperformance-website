@@ -47,7 +47,7 @@ const AboutPage = () => {
       </section>
 
       <section className="max-w-4xl md:max-w-5xl mx-auto my-8 md:my-10 p-4 text-center">
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl">
+        <p className="text-lg sm:text-xl lg:text-2xl">
           Nova Performance is a specialised strength sports facility. Nova
           prides itself on the community atmosphere encouraged among all members
           that allows each member to perform to their best. Nova Performance
@@ -60,7 +60,7 @@ const AboutPage = () => {
       </section>
 
       <section className="text-center my-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-red-500">
+        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 text-red-500">
           Meet the Team
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">

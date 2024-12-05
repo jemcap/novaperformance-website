@@ -18,17 +18,17 @@ const Card = () => {
         const { id, title, description, price } = item;
         return (
           <div key={id} className="card bg-base-100 w-full shadow-xl mx-auto ">
-            <figure className="px-4 py-4 md:px-6 md:py-6 lg:px-10 lg:py-10 bg-neutral-500">
+            <figure className="px-4 py-4 bg-neutral-500">
               <Image
                 src="/WhiteNP.png"
                 alt={title}
                 width={500}
                 height={500}
-                className="w-full h-auto object-contain"
+                className="w-[200px] h-auto object-contain"
               />
             </figure>
             <div className="card-body items-center text-nova-charcoal">
-              <h1 className="card-title text-center text-2xl md:text-3xl lg:text-5xl">
+              <h1 className="card-title text-center text-2xl lg:text-4xl">
                 {title}
               </h1>
               <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold text-red-700">
@@ -37,7 +37,7 @@ const Card = () => {
               <small className="text-lg md:text-xl lg:text-3xl">
                 per month
               </small>
-              <ul className="list-disc list-inside text-start text-sm md:text-lg lg:text-2xl">
+              <ul className="list-disc list-inside text-start text-sm md:text-lg lg:text-xl mt-10">
                 {description.map((desc, index) => (
                   <li key={index}>{desc}</li>
                 ))}
@@ -46,7 +46,7 @@ const Card = () => {
                 <Button
                   type="button"
                   label="Book a consultation"
-                  fontSize="text-sm md:text-lg lg:text-2xl"
+                  fontSize="text-sm lg:text-xl"
                   onClickHandler={openModal}
                 />
               </div>

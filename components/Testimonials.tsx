@@ -15,7 +15,7 @@ const TestimonialItem = ({ testimonial }: { testimonial: Testimonial }) => {
         </svg>
 
         <blockquote className="relative">
-          <p className="text-lg lg:text-2xl tracking-tight text-slate-900">
+          <p className="text-lg  tracking-tight text-slate-900">
             {testimonial.quote}
           </p>
         </blockquote>
@@ -48,7 +48,7 @@ const Testimonials = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-white lg:text-6xl">
+          <h2 className="font-display text-3xl tracking-tight text-white lg:text-5xl">
             Testimonials
           </h2>
         </div>

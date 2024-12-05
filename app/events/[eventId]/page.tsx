@@ -59,21 +59,19 @@ const EventId = ({
           style={{ borderRadius: 100 }}
         />
         <div className="flex flex-col justify-center ml-5 gap-10">
-          <h1 className="text-5xl text-center lg:text-left lg:text-8xl">
-            {name}
-          </h1>
+          <h1 className="text-5xl text-center lg:text-left ">{name}</h1>
           <div className="flex gap-10">
-            <small className="flex gap-2 text-2xl">
+            <small className="flex gap-2 text-xl">
               <FaRegCalendarAlt />
               {date}
             </small>
-            <small className="flex gap-2 text-2xl">
+            <small className="flex gap-2 text-xl">
               <IoLocationOutline />
               {location}
             </small>
           </div>
-          <p className="max-w-5xl text-xl lg:text-3xl">{description}</p>
-          <p className="text-3xl text-red-500">
+          <p className="max-w-5xl text-xl">{description}</p>
+          <p className="text-xl text-red-500">
             Do you want to compete? Sign up below!
           </p>
           <Button

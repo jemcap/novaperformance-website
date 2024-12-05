@@ -30,10 +30,10 @@ const Sport = () => {
             >
               {/* Text Section */}
               <div className="text-center lg:text-start flex-1 mb-4 lg:mb-0 mx-4 lg:mx-10">
-                <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-8xl font-bold mb-2 text-red-500">
+                <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold mb-2 text-red-500">
                   {title}
                 </h1>
-                <p className="text-xl sm:text-base lg:text-3xl text-gray-300 mb-4">
+                <p className="text-xl sm:text-base lg:text-2xl text-gray-300 mb-4">
                   {description}
                 </p>
               </div>

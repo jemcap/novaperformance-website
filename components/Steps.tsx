@@ -18,7 +18,7 @@ const Steps = () => {
         className="flex flex-row text-center md:text-start h-[750px] md:h-5/6 justify-between align-elements items-center"
       >
         <div>
-          <ul className="max-md:hidden steps steps-vertical text-xl h-[600px] lg:text-3xl lg:h-[1000px]">
+          <ul className="max-md:hidden steps steps-vertical text-xl h-[600px] lg:text-xl lg:h-[700px]">
             <li className="step">Contact us</li>
             <li className="step">1:1 with a coach and make a plan</li>
             <li className="step">Receive your tailored program</li>
@@ -26,10 +26,10 @@ const Steps = () => {
           </ul>
         </div>
         <div className="mx-5 md:mx-10 lg:mx-20 lg:text-end">
-          <h1 className="text-4xl md:text-4xl lg:text-8xl">
+          <h1 className="text-4xl md:text-4xl lg:text-6xl">
             How can I <span className="text-red-500">get started?</span>
           </h1>
-          <p className="w-full max-w-2xl md:max-w-3xl text-xl md:text-2xl lg:text-3xl mt-4 md:mt-6 leading-relaxed">
+          <p className="w-full max-w-2xl text-xl  mt-4 md:mt-6 leading-relaxed">
             Getting started at Nova Performance is simple. Begin by contacting
             us to discuss your goals. From there, you&apos;ll have a 1:1 session
             with one of our expert coaches, who will help you create a
@@ -41,11 +41,7 @@ const Steps = () => {
 
           <div className="mt-7">
             <Link href="/contact">
-              <Button
-                type="button"
-                label="Contact us"
-                fontSize="text-xl lg:text-2xl"
-              />
+              <Button type="button" label="Contact us" fontSize="text-xl" />
             </Link>
           </div>
         </div>

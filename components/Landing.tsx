@@ -38,13 +38,13 @@ const Landing = () => {
               muted
               playsInline={true}
               loop
-              className="w-screen h-[400px] lg:h-[1000px] object-cover"
+              className="w-screen h-[400px] lg:h-[600px] object-cover relative"
             >
               <source src="/nova-video.mp4" type="video/mp4"></source>
             </video>
-            <div className="absolute inset-0 bg-black opacity-50"></div>
-            <div className="content absolute inset-0 flex flex-col items-center lg:items-start top-[50%] lg:top-[55%] text-start align-elements">
-              <h1 className="content-heading text-5xl font-bold text-white md:text-6xl lg:text-9xl">
+            <div className="absolute inset-0 bg-black opacity-75"></div>
+            <div className="content absolute inset-0 flex flex-col items-center lg:items-start top-[40%] text-start align-elements">
+              <h1 className="content-heading text-3xl font-bold text-white md:text-4xl lg:text-6xl">
                 Are you ready to{" "}
                 <span className="text-red-500 mx-1 font-extrabold relative inline-block stroke-current">
                   Get strong?
@@ -61,17 +61,17 @@ const Landing = () => {
                   </svg>
                 </span>
               </h1>
-              <p className="mt-4 text-sm sm:text-lg lg:text-2xl xl:text-[2rem] text-gray-100 max-w-[800px]">
+              <p className="mt-4 text-sm text-center lg:text-start lg:text-xl text-gray-100 max-w-[400px] lg:max-w-[750px]">
                 Train with us to unlock your strength potential! Whether
                 you&apos;re new or experienced, our expert coaches and
                 supportive community will help you push limits, build
                 confidence, and achieve your goals. Start your journey today!
               </p>
-              <div className="mt-7">
+              <div className="mt-9">
                 <Button
                   type="button"
                   label="Inquire today"
-                  fontSize="text-xl lg:text-2xl"
+                  fontSize="text-sm"
                   onClickHandler={openModal}
                 />
               </div>

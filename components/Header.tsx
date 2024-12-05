@@ -13,7 +13,7 @@ const Header = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   return (
-    <nav className=" bg-nova-charcoal flex  relative z-30 py-1">
+    <nav className=" bg-nova-charcoal flex  relative z-30">
       <div className="navbar align-elements">
         <div className="navbar-start">
           <div className="dropdown">
@@ -61,7 +61,7 @@ const Header = () => {
                 <li key={id}>
                   <Link
                     href={url}
-                    className="text-xl text-gray-50 active:text-red-500 focus:text-red-500 flex justify-center cursor-pointer pb-1.5 transition-all hover:font-bold"
+                    className="text-lg text-gray-50 active:text-red-500 focus:text-red-500 flex justify-center cursor-pointer pb-1.5 transition-all hover:font-bold"
                   >
                     {text}
                   </Link>
