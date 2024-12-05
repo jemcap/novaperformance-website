@@ -1,8 +1,6 @@
-import { IoLocationOutline } from "react-icons/io5";
 import { LuClock2 } from "react-icons/lu";
 import { FaCircleCheck } from "react-icons/fa6";
 import { FaChalkboardTeacher } from "react-icons/fa";
-import AnnouncementBanner from "./AnnouncementBanner";
 
 const Banner = () => {
   return (
