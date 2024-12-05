@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { testimonials } from "@/constants/links";
 import type { Testimonial } from "@/constants/links";
 
@@ -26,8 +28,8 @@ const TestimonialItem = ({ testimonial }: { testimonial: Testimonial }) => {
             </div>
           </div>
           <div className="overflow-hidden rounded-full bg-slate-50">
-            <img
-              alt=""
+            <Image
+              alt={testimonial.name}
               className="h-14 w-14 object-cover"
               style={{ color: "transparent" }}
               src={testimonial.image}
