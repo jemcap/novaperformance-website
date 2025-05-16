@@ -10,8 +10,8 @@ const WhyNova = () => {
   return (
     <motion.section
       ref={ref}
-      initial={{ opacity: 0, x: 200 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
+      initial={{ opacity: 0}}
+      animate={inView ? { opacity: 1 } : {}}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="flex flex-col items-center text-center lg:flex-row lg:justify-between align-elements my-20 gap-10"
     >

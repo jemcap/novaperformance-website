@@ -12,8 +12,8 @@ const Steps = () => {
     <section className=" bg-neutral-900 ">
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, x: -200 }}
-        animate={inView ? { opacity: 1, x: 0 } : {}}
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1} : {}}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex flex-row text-center md:text-start h-[750px] md:h-5/6 justify-between align-elements items-center"
       >

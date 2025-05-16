@@ -39,7 +39,6 @@ interface Events extends Sports {
 
 export const NAV_LINKS:NavLinks[] = [
   { id: 1, url: "/about", text: "About" },
-  { id: 2, url: "/events", text: "Events" },
   { id: 3, url: "/membership", text: "Membership" },
   { id: 4, url: "/contact", text: "Contact" },
 ];
@@ -125,36 +124,30 @@ export const teamList:Members[] = [
     img: "/craig_2.png",
     social: "cmt_coaching/"
   },
+
   {
     id: 3,
-    name: "Matt Nice",
-    role: "Head Strongman Coach",
-    img: "/matt_1.png",
-    social: "cambridge_strength_coaching/"
-  },
-  {
-    id: 4,
     name: "Lily Yu",
     role: "Weightlifting Coach",
     img: "/lily_yu_1.png",
     social: "coach_yustrength/"
   },
   {
-    id: 5,
+    id: 4,
     name: "Tiago Costa",
     role: "Weightlifting Coach",
     img: "/tiago_1.png",
     social: "tdotlifting/"
   },
   {
-    id: 6,
+    id: 5,
     name: "Sam Evans",
     role: "Weightlifting Coach",
     img: "/sam_1.png",
     social: "sevanstraining/"
   },
   {
-    id: 7,
+    id: 6,
     name: "Isaac Leatherland",
     role: "Physiotherapist / Powerlifting Coach",
     img: "/isaac_1.png",
